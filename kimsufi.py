@@ -31,4 +31,5 @@ while True:
         print("Server : %s @ %s, Delay before delivery: %s\n" % (serv_parsed, zone_parsed, avail_parsed))
         command = command.replace('%server%', serv_parsed)
         os.system(command)
+        time.sleep(3600) # no point in re-sending an email in the next hour
   time.sleep(random.randint(20,40)) # check every 30-ish seconds
